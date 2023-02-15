@@ -6,3 +6,6 @@
 
 Companion repository for the following articles:
 - bior&Chi;iv Preprint: https://www.biorxiv.org/content/10.1101/2023.02.10.528025v1
+
+
+![](figures/process.png)
