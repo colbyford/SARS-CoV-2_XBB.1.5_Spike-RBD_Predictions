@@ -9,3 +9,8 @@ Companion repository for the following articles:
 
 
 ![](figures/process.png)
+
+
+Other Media:
+- Inside UNC Charlotte Press Release: https://inside.charlotte.edu/news-features/2023-02-16/advanced-computing-unc-charlotte-indicates-current-antibodies-effective
+- Newswise Press Release: https://www.newswise.com/coronavirus/advanced-computing-at-unc-charlotte-indicates-current-antibodies-effective-against-newly-emergent-sars-cov-2-xbb-1-5/?article_id=787137
