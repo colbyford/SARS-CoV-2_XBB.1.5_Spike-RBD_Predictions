@@ -1,4 +1,4 @@
-# Positing changes in neutralizing antibody activity for SARS-CoV-2 XBB.1.5 using _in silico_ protein modeling.
+# Predicting changes in neutralizing antibody activity for SARS-CoV-2 XBB.1.5 using _in silico_ protein modeling.
 
 [![DOI](https://zenodo.org/badge/DOI/10.1101/2023.02.10.528025.svg)](https://doi.org/10.1101/2023.02.10.528025)
 
