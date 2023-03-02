@@ -2,10 +2,10 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.1101/2023.02.10.528025.svg)](https://doi.org/10.1101/2023.02.10.528025)
 
-<h4 align="right">Colby T. Ford, Ph.D., Sirish Yasa, Denis Jacob Machado, Ph.D., Richard Allen White III, Ph.D., and Daniel A. Janies, Ph.D.<br>The University of North Carolina at Charlotte</h4>
+<h4 align="right">Colby T. Ford, Ph.D., Sirish Yasa, Denis Jacob Machado, Ph.D., <br>Richard Allen White III, Ph.D., and Daniel A. Janies, Ph.D.<br>The University of North Carolina at Charlotte</h4>
 
 #### Companion repository for the following articles:
-- bior&Chi;iv Preprint: https://www.biorxiv.org/content/10.1101/2023.02.10.528025v1
+- bior&Chi;iv Preprint: https://www.biorxiv.org/content/10.1101/2023.02.10.528025
 
 
 ![](figures/process.png)
