@@ -12,11 +12,12 @@ data <- read_excel("HADDOCK_Results.xlsx", sheet = "Results") %>%
          electrostatic_energy = `Electrostatic energy`,
          desolvation_energy = `Desolvation energy`,
          restraints_violation_energy = `Restraints violation energy`,
-         buried_surface_area = `Buried Surface Area`)
+         buried_surface_area = `Buried Surface Area`,
+         prodigy_deltag = `PRODIGY DGprediction (Kcal/mol)`)
 
-moctet_model <- readRDS("../../../moctet_affinity_model/moctet_model.RDS")
-
-data$`Predicted Octet Affinity` <- predict(moctet_model, data)
+# moctet_model <- readRDS("../../../moctet_affinity_model/moctet_model.RDS")
+# 
+# data$`Predicted Octet Affinity` <- predict(moctet_model, data)
 
 ####################
 ## Box Plots
@@ -84,14 +85,27 @@ de_boxplot <- ggboxplot(data, x = "Spike RBD",
 #   stat_compare_means(method = "wilcox.test", comparisons = variant_comparisons)
 
 ## Predicted Octet Affinity
-poa_boxplot <- ggboxplot(data, x = "Spike RBD",
-                      y = "Predicted Octet Affinity",
-                      ylab = "Predicted Octet Affinity\nlog(kD/nM)",
-                      xlab = "",
-                      color = "Spike RBD",
-                      # palette = "jco",
-                      palette = get_palette("Dark2", 4),
-                      add = "dotplot") + 
+# poa_boxplot <- ggboxplot(data, x = "Spike RBD",
+#                       y = "Predicted Octet Affinity",
+#                       ylab = "Predicted Octet Affinity\nlog(kD/nM)",
+#                       xlab = "",
+#                       color = "Spike RBD",
+#                       # palette = "jco",
+#                       palette = get_palette("Dark2", 4),
+#                       add = "dotplot") + 
+#   stat_compare_means(method = "wilcox.test", comparisons = variant_comparisons)
+
+## PRODIGY
+pdg_boxplot <- ggboxplot(data, x = "Spike RBD",
+                         # y = "PRODIGY DGprediction (Kcal/mol)",
+                         y = "prodigy_deltag",
+                         # ylab = "PRODIGY Predicted ΔG\nKcal/mol",
+                         ylab = "PRODIGY Predicted \u0394G\nKcal/mol",
+                         xlab = "",
+                         color = "Spike RBD",
+                         # palette = "jco",
+                         palette = get_palette("Dark2", 4),
+                         add = "dotplot") + 
   stat_compare_means(method = "wilcox.test", comparisons = variant_comparisons)
 
 ## Buried Surface Area
@@ -104,7 +118,15 @@ bsa_boxplot <- ggboxplot(data, x = "Spike RBD",
                      add = "dotplot") + 
   stat_compare_means(method = "wilcox.test", comparisons = variant_comparisons)
 
-boxplot_figure <- ggarrange(had_boxplot, vdw_boxplot, ee_boxplot, de_boxplot, poa_boxplot, bsa_boxplot,
+
+## Combined BoxPlot Figure
+boxplot_figure <- ggarrange(had_boxplot,
+                            vdw_boxplot,
+                            ee_boxplot,
+                            de_boxplot,
+                            # poa_boxplot,
+                            bsa_boxplot,
+                            pdg_boxplot,
                     # labels = c("HADDOCK Score",
                     #            "van der Waals Energy",
                     #            "Electrostatic Energy",
@@ -112,12 +134,21 @@ boxplot_figure <- ggarrange(had_boxplot, vdw_boxplot, ee_boxplot, de_boxplot, po
                     #            "Restraints Violation Energy",
                     #            "Buried Surface Area"),
                     labels = c("A", "B", "C", "D", "E", "F"),
-                    ncol = 3, nrow = 2,
+                    # ncol = 3, nrow = 2,
+                    ncol = 2, nrow = 3,
                     common.legend = TRUE,
                     legend = "bottom")
 
 boxplot_figure
 
+
+ggsave(filename = "boxplot_vert.eps", 
+       plot = boxplot_figure, 
+       device = cairo_ps, 
+       dpi = 1200,
+       width = 8,
+       height = 12, 
+       units = "in")
 
 ###############
 
@@ -132,7 +163,8 @@ umap_fit <- data %>%
          `Desolvation energy`,
          # `Restraints violation energy`,
          `Buried Surface Area`,
-         `Predicted Octet Affinity`) %>%
+         # `Predicted Octet Affinity`
+         `PRODIGY DGprediction (Kcal/mol)`) %>%
   tibble::column_to_rownames("HADDOCK Job Name") %>%
   scale() %>% 
   umap()
