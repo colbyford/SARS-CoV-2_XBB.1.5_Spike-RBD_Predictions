@@ -49,3 +49,4 @@ po/*~
 rsconnect/
 .DS_Store
 HADDOCK_Results/uncompressed/
+HADDOCK_Results/prodigy/
