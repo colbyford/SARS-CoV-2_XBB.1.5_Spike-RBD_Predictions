@@ -7,9 +7,7 @@
 #### Companion repository for the following articles:
 - bior&Chi;iv Preprint: https://www.biorxiv.org/content/10.1101/2023.02.10.528025
 
-
 ![](figures/process.png)
-
 
 __Other Media:__
 - Inside UNC Charlotte Press Release: https://inside.charlotte.edu/news-features/2023-02-16/advanced-computing-unc-charlotte-indicates-current-antibodies-effective
