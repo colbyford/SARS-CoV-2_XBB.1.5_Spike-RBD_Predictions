@@ -1,7 +1,10 @@
 ## Code to generate comparison plots for subvariant antibody performance
 
 library(dplyr)
+library(tidyr)
+library(stringr)
 library(readxl)
+library(readr)
 library(ggplot2)
 library(ggpubr)
 
@@ -193,4 +196,39 @@ umap_df %>%
   facet_wrap(~`Spike RBD`) +
   theme_pubr() +
   theme(legend.position = "none")
-  
+
+
+
+################
+
+## Prodigy Comparison
+
+prodigy_data <- read_csv("../HADDOCK_Results/PRODIGY_Results_All.csv") %>%
+  separate("Job name", c("job_1", "job_2"), sep = "__") %>% 
+  separate("job_1", c("job_id", "Spike RBD"), sep = "-") %>% 
+  separate("job_2", c("antibody", "summary"), sep = "_") %>% 
+  rename("prodigy_deltag" = "DGprediction (low refinement) (Kcal/mol)") %>% 
+  mutate(`Spike RBD` = str_replace_all(`Spike RBD`,'_','.')) %>% 
+  filter(antibody != 'AZD1061')
+
+variant_comparisons <- combn(c("B.1.1.529", "BJ.1", "BM.1.1.1", "XBB.1.5"), 2, simplify = FALSE)
+
+rbd_prd_boxplot <- ggboxplot(prodigy_data, x = "Spike RBD",
+                         y = "prodigy_deltag",
+                         ylab = "PRODIGY Predicted \u0394G\nKcal/mol",
+                         xlab = "",
+                         color = "Spike RBD",
+                         # palette = "jco",
+                         palette = get_palette("Dark2", 4),
+                         add = "dotplot") + 
+  stat_compare_means(method = "wilcox.test", comparisons = variant_comparisons)
+
+rbd_prd_boxplot
+
+ggsave(filename = "prodigy_comparisons.eps", 
+       plot = rbd_prd_boxplot, 
+       device = cairo_ps, 
+       dpi = 1200,
+       width = 8,
+       height = 6, 
+       units = "in")
