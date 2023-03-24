@@ -9,6 +9,8 @@
 
 ![](figures/process.png)
 
+Supplementary Media: https://github.com/colbyford/SARS-CoV-2_XBB.1.5_Spike-RBD_Predictions/raw/main/supplementary_materials/Supplementary_Notes_SARS_CoV_2_XBB_1_5_AntibodyBinding.pdf
+
 __Other Media:__
 - Inside UNC Charlotte Press Release: https://inside.charlotte.edu/news-features/2023-02-16/advanced-computing-unc-charlotte-indicates-current-antibodies-effective
 - Newswise Press Release: https://www.newswise.com/coronavirus/advanced-computing-at-unc-charlotte-indicates-current-antibodies-effective-against-newly-emergent-sars-cov-2-xbb-1-5/?article_id=787137
