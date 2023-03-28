@@ -1,12 +1,12 @@
 # Predicting changes in neutralizing antibody activity for SARS-CoV-2 XBB.1.5 using _in silico_ protein modeling.
 
-[![DOI](https://zenodo.org/badge/DOI/10.1101/2023.02.10.528025.svg)](https://doi.org/10.1101/2023.02.10.528025)
+[![DOI](https://zenodo.org/badge/DOI/10.3389/fviro.2023.1172027.svg)](https://doi.org/10.3389/fviro.2023.1172027)
 
 <h4 align="right">Colby T. Ford, Sirish Yasa, Denis Jacob Machado, Richard Allen White III, and Daniel A. Janies<br><i>The University of North Carolina at Charlotte</i></h4>
 
 #### Companion repository for the following articles:
-- bior&Chi;iv Preprint: https://www.biorxiv.org/content/10.1101/2023.02.10.528025
-- Frontiers in Virology: _Coming Soon..._
+<!--- bior&Chi;iv Preprint: https://www.biorxiv.org/content/10.1101/2023.02.10.528025-->
+- Frontiers in Virology: https://www.frontiersin.org/articles/10.3389/fviro.2023.1172027
 
 ![](figures/process.png)
 
