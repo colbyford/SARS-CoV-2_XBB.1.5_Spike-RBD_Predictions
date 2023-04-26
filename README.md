@@ -26,8 +26,9 @@ __Other Media:__
     JOURNAL={Frontiers in Virology},
     VOLUME={3},
     YEAR={2023},
-    URL={https://www.frontiersin.org/articles/10.3389/fviro.2022.830202},
+    URL={https://www.frontiersin.org/articles/10.3389/fviro.2023.1172027},
     DOI={10.3389/fviro.2023.1172027},
-    ISSN={2673-818X}
+    ISSN={2673-818X},
+    ABSTRACT={The SARS-CoV-2 variant XBB.1.5 is of concern as it has high transmissibility. XBB.1.5 currently accounts for upwards of 30% of new infections in the United States. One year after our group published the predicted structure of the Omicron (B.1.1.529) variant’s receptor binding domain (RBD) and antibody binding affinity, we return to investigate the new mutations seen in XBB.1.5 which is a descendant of Omicron. Using in silico modeling approaches against newer neutralizing antibodies that are shown effective against B.1.1.529, we predict the immune consequences of XBB.1.5’s mutations and show that there is no statistically significant difference in overall antibody evasion when comparing to the B.1.1.529 and other related variants (e.g., BJ.1 andBM.1.1.1). However, noticeable changes in antibody binding affinity were seen due to specific amino acid changes of interest in the newer variants.}
 }
 ```
