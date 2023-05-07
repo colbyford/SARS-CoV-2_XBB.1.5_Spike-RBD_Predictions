@@ -4,9 +4,8 @@
 
 <h4 align="right">Colby T. Ford, Sirish Yasa, Denis Jacob Machado, Richard Allen White III, and Daniel A. Janies<br><i>The University of North Carolina at Charlotte</i></h4>
 
-#### Companion repository for the following article:
+#### Companion repository for our Frontiers in Virology article: https://www.frontiersin.org/articles/10.3389/fviro.2023.1172027
 <!--- bior&Chi;iv Preprint: https://www.biorxiv.org/content/10.1101/2023.02.10.528025-->
-- Frontiers in Virology: https://www.frontiersin.org/articles/10.3389/fviro.2023.1172027
 
 ![](figures/process.png)
 
